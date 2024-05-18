@@ -1,0 +1,30 @@
+{
+  "name": "lightsoket-central",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Lightsoket Central for Content Management",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/strapi": "4.24.2",
+    "@strapi/plugin-users-permissions": "4.24.2",
+    "@strapi/plugin-i18n": "4.24.2",
+    "mysql": "2.18.1",
+    "mysql2": "^3.9.7",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "styled-components": "5.3.3"
+  },
+  "author": {
+    "name": "Sly"
+  },
+  "strapi": {
+    "uuid": "93b03837-52f4-46ca-b20e-13429f4e740c"
+  },
+  "license": "MIT"
+}

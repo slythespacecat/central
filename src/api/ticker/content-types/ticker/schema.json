@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "tickers",
+  "info": {
+    "singularName": "ticker",
+    "pluralName": "tickers",
+    "displayName": "Ticker"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Content": {
+      "type": "text"
+    }
+  }
+}
