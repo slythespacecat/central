@@ -4,8 +4,7 @@
   "info": {
     "singularName": "solar",
     "pluralName": "solars",
-    "displayName": "Solar",
-    "description": ""
+    "displayName": "Solar"
   },
   "options": {
     "draftAndPublish": true
@@ -15,33 +14,8 @@
     "Title": {
       "type": "string"
     },
-    "Date": {
-      "type": "date"
-    },
     "Content": {
       "type": "blocks"
-    },
-    "Content_HTML": {
-      "type": "richtext"
-    },
-    "Content_Dynamic": {
-      "type": "dynamiczone",
-      "components": [
-        "dynamic-content.dynamic-content"
-      ]
-    },
-    "Rich_Text": {
-      "type": "blocks"
-    },
-    "Media": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": true
     }
   }
 }

@@ -1,6 +1,5 @@
 {
   "name": "lightsoket-central",
-  "private": true,
   "version": "0.1.0",
   "description": "Lightsoket Central for Content Management",
   "scripts": {
@@ -10,9 +9,10 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/strapi": "4.24.2",
-    "@strapi/plugin-users-permissions": "4.24.2",
-    "@strapi/plugin-i18n": "4.24.2",
+    "@strapi/admin": "4.24.3",
+    "@strapi/plugin-i18n": "4.24.3",
+    "@strapi/plugin-users-permissions": "4.24.3",
+    "@strapi/strapi": "4.24.3",
     "mysql": "2.18.1",
     "mysql2": "^3.9.7",
     "react": "^18.0.0",
@@ -26,5 +26,6 @@
   "strapi": {
     "uuid": "93b03837-52f4-46ca-b20e-13429f4e740c"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "yarn@1.22.22"
 }

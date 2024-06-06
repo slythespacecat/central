@@ -788,6 +788,55 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiArticleArticle extends Schema.CollectionType {
+  collectionName: 'articles';
+  info: {
+    singularName: 'article';
+    pluralName: 'articles';
+    displayName: 'Article';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Category: Attribute.Enumeration<
+      [
+        'solar',
+        'battery',
+        'energyai',
+        'gas',
+        'news',
+        'podcast',
+        'events',
+        'providers'
+      ]
+    > &
+      Attribute.Required;
+    Date: Attribute.Date;
+    Content: Attribute.Blocks;
+    Image: Attribute.Media;
+    Author: Attribute.String;
+    Link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::article.article',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::article.article',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEventEvent extends Schema.CollectionType {
   collectionName: 'events';
   info: {
@@ -806,7 +855,11 @@ export interface ApiEventEvent extends Schema.CollectionType {
     Event_End: Attribute.DateTime;
     Website: Attribute.String;
     Location: Attribute.String;
-    Status: Attribute.String;
+    State: Attribute.String;
+    Content: Attribute.Blocks;
+    Status: Attribute.Enumeration<
+      ['earlybird', 'registration', 'full', 'pending']
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -831,19 +884,13 @@ export interface ApiSolarSolar extends Schema.CollectionType {
     singularName: 'solar';
     pluralName: 'solars';
     displayName: 'Solar';
-    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     Title: Attribute.String;
-    Date: Attribute.Date;
     Content: Attribute.Blocks;
-    Content_HTML: Attribute.RichText;
-    Content_Dynamic: Attribute.DynamicZone<['dynamic-content.dynamic-content']>;
-    Rich_Text: Attribute.Blocks;
-    Media: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -910,6 +957,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::article.article': ApiArticleArticle;
       'api::event.event': ApiEventEvent;
       'api::solar.solar': ApiSolarSolar;
       'api::ticker.ticker': ApiTickerTicker;

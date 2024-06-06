@@ -49,25 +49,28 @@ const config = {
     },
     dark: {
      colors: {
-       neutral0: "#22517a", // darker background
-       neutral100: "#275d8b", // lighter background
+      neutral0: "#22517a", // darker background
+      neutral100: "#275d8b", // lighter background
+      neutral200: '#9bc2e3', //strokes
+      neutral150: '#4c91cd', //darker strokes and buttons bg
+      neutral500: '#fcf7ff', // icons
+      neutral600: '#9bc2e3', // text and darker icons
+      neutral700: '#c3daee', // text hover
+      neutral800: '#ebf3f9', //main text
+
       danger100: '#F2E9E4', //danger bg button 
+      
       buttonNeutral0: '#428bca', // button text
       buttonPrimary500: '#ebf3f9', // button bg hover
       buttonPrimary600: '#F2E9E4', // button bg
       
-       success100: "#22517a", // success bg
-       primary100: '#428bca', // active section background
-       primary500: "#74a9d8", // light highlight
-       primary600: '#F2E9E4', // user avatar, notifications and icons
-       primary700: '#fcf7ff', // active section text
+      success100: "#22517a", // success bg
+
+      primary100: '#428bca', // active section background
+      primary500: "#74a9d8", // light highlight
+      primary600: '#F2E9E4', // user avatar, notifications and icons
+      primary700: '#fcf7ff', // active section text
        
-        neutral200: '#9bc2e3', //strokes
-        neutral150: '#4c91cd', //darker strokes and buttons bg
-        neutral500: '#fcf7ff', // icons
-        neutral600: '#9bc2e3', // text and darker icons
-        neutral700: '#c3daee', // text hover
-        neutral800: '#ebf3f9', //main text
 
       }
      

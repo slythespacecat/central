@@ -30,8 +30,20 @@
     "Location": {
       "type": "string"
     },
-    "Status": {
+    "State": {
       "type": "string"
+    },
+    "Content": {
+      "type": "blocks"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "earlybird",
+        "registration",
+        "full",
+        "pending"
+      ]
     }
   }
 }
