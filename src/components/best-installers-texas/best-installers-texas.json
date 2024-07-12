@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_best_installers_texas_best_installers_texas",
+  "info": {
+    "displayName": "best_installers_texas",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "light",
+        "dark",
+        "any"
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_best_panels_best_panels",
+  "info": {
+    "displayName": "best_panels"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "picture": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "category": {
+      "type": "string"
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "light",
+        "dark",
+        "any"
+      ]
+    }
+  }
+}

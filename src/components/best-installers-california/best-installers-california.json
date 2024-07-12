@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_best_installers__californias",
+  "info": {
+    "displayName": "best_installers_california",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "picture": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "light",
+        "dark",
+        "any"
+      ]
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}

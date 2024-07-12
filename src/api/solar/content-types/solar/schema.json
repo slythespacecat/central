@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "solars",
+  "info": {
+    "singularName": "solar",
+    "pluralName": "solars",
+    "displayName": "Solar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "best_solar_companies": {
+      "type": "component",
+      "repeatable": true,
+      "component": "best-solar-companies.best-solar-companies"
+    },
+    "best_installers_cali": {
+      "type": "component",
+      "repeatable": true,
+      "component": "best-installers-california.best-installers-california"
+    },
+    "best_installers_texas": {
+      "type": "component",
+      "repeatable": true,
+      "component": "best-installers-texas.best-installers-texas"
+    },
+    "best_panels": {
+      "type": "component",
+      "repeatable": true,
+      "component": "best-panels.best-panels"
+    }
+  }
+}

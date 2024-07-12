@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_best_companies_best_solar_companies",
+  "info": {
+    "displayName": "best_solar_companies",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "string"
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "dark",
+        "light",
+        "any"
+      ]
+    }
+  }
+}
