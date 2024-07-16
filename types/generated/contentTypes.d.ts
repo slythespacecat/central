@@ -837,6 +837,43 @@ export interface ApiArticleArticle extends Schema.CollectionType {
   };
 }
 
+export interface ApiEpisodeEpisode extends Schema.CollectionType {
+  collectionName: 'episodes';
+  info: {
+    singularName: 'episode';
+    pluralName: 'episodes';
+    displayName: 'Episode';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Episode_Number: Attribute.String & Attribute.Required & Attribute.Unique;
+    Guest: Attribute.String & Attribute.DefaultTo<'TBA'>;
+    Description: Attribute.Text;
+    Link: Attribute.String;
+    Thumbnail: Attribute.Media;
+    Status: Attribute.Enumeration<['Upcoming', 'Published']> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::episode.episode',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::episode.episode',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEventEvent extends Schema.CollectionType {
   collectionName: 'events';
   info: {
@@ -970,6 +1007,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::article.article': ApiArticleArticle;
+      'api::episode.episode': ApiEpisodeEpisode;
       'api::event.event': ApiEventEvent;
       'api::solar.solar': ApiSolarSolar;
       'api::ticker.ticker': ApiTickerTicker;

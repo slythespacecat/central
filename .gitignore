@@ -2,3 +2,7 @@ node_modules
 .keystone/admin
 keystone.db
 *.log
+
+.env
+latest-strapi-13-07-2024.tar.gz
+latest-strapi.tar.gz

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "episodes",
+  "info": {
+    "singularName": "episode",
+    "pluralName": "episodes",
+    "displayName": "Episode",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Episode_Number": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Guest": {
+      "type": "string",
+      "default": "TBA"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Link": {
+      "type": "string"
+    },
+    "Thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Upcoming",
+        "Published"
+      ],
+      "required": true
+    }
+  }
+}
